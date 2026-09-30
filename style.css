@@ -99,6 +99,7 @@ section { padding: 72px 16px; max-width: 1120px; margin: 0 auto; }
 .steps div { color: var(--muted); }
 .step-btn { margin-top: 12px; }
 .soon { margin-top: 22px; color: var(--mint); }
+.optin-soon { display: block; margin-top: 10px; color: var(--mint); font-size: 15px; }
 
 /* Footer */
 footer { text-align: center; color: var(--muted); font-size: 15px; padding-bottom: 28px; }

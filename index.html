@@ -95,10 +95,10 @@
     <p class="section-lede">Before Cat Chess can launch on Google Play, 12 people need to test it for 14 days. It's free, it takes two minutes, and you get to play before anyone else.</p>
     <ol class="steps">
       <li><span>1</span><div><b>Join the tester group</b><br>This adds your Google account to the test.<br><a class="btn primary step-btn" data-link="group" href="#">Join the group</a></div></li>
-      <li><span>2</span><div><b>Opt in on your Android phone</b><br>Open the link and tap “Become a tester”.<br><a class="btn step-btn" data-link="optin" href="#">Opt in to the test</a></div></li>
+      <li><span>2</span><div><b>Opt in on your Android phone</b><br>Open the link and tap “Become a tester”.<br><a class="btn step-btn" data-link="optin" href="#">Opt in to the test</a><small class="optin-soon">The opt-in link appears here as soon as Google approves the test. Group members also get it by email.</small></div></li>
       <li><span>3</span><div><b>Install and keep it for 14 days</b><br>Play as much or as little as you like. Feedback is very welcome.</div></li>
     </ol>
-    <p class="soon" hidden>Sign-up links go live very soon. In the meantime, email <a href="mailto:nblynch02@gmail.com">nblynch02@gmail.com</a> and we'll add you.</p>
+    <p class="soon" hidden>Questions? Email <a href="mailto:nblynch02@gmail.com">nblynch02@gmail.com</a>.</p>
   </section>
 </main>
 
@@ -111,16 +111,16 @@
 <script>
   // Fill these in when the links exist; empty links show the "coming soon" note instead.
   const LINKS = {
-    group: "",
+    group: "https://groups.google.com/g/cat-chess-testers",
     optin: ""
   };
-  let missing = false;
   document.querySelectorAll("[data-link]").forEach((a) => {
     const url = LINKS[a.dataset.link];
     if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
-    else { a.classList.add("disabled"); a.removeAttribute("href"); a.setAttribute("aria-disabled", "true"); missing = true; }
+    else { a.hidden = true; }
   });
-  if (missing) document.querySelector(".soon").hidden = false;
+  document.querySelectorAll(".optin-soon").forEach((el) => { el.hidden = Boolean(LINKS.optin); });
+  document.querySelector(".soon").hidden = false;
 </script>
 </body>
 </html>
