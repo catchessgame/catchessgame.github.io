@@ -83,7 +83,7 @@ section { padding: 72px 16px; max-width: 1120px; margin: 0 auto; }
 .costumes figcaption { color: var(--cream); font-weight: 800; font-size: 16px; }
 
 /* Screenshots */
-.shot-row { display: flex; gap: 16px; overflow-x: auto; padding: 30px 4px 12px; scroll-snap-type: x mandatory; }
+.shot-row { display: flex; gap: 16px; overflow-x: auto; scrollbar-color: var(--panel-edge) transparent; padding: 30px 4px 12px; scroll-snap-type: x mandatory; }
 .shot-row img { width: 220px; flex: 0 0 auto; border-radius: 18px; border: 3px solid var(--panel-edge); scroll-snap-align: start; }
 
 /* Playtest */
